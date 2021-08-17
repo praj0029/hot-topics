@@ -1,6 +1,8 @@
 // Get References
-let mainContent = document.getElementById('main-content');
-let navLinks = document.getElementsByClassName('menu-item');
+const mainContent = document.getElementById('main-content');
+const navLinks = document.getElementsByClassName('menu-item');
+let url = "./partials/home.html";
+
 
 /**
  * loadContent is a function that request the content of clicked
@@ -28,6 +30,11 @@ function selectContent(e){
     e.preventDefault();
     let url = this.href; 
 
+    loadContent(url);
+}
+
+//Pre-load home page
+window.onload =  function(){
     loadContent(url);
 }
 
